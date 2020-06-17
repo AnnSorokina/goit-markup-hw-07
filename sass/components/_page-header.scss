@@ -1,0 +1,97 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-menu {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  &-item {
+    position: relative;
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &-ref {
+    position: relative;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-decoration: none;
+    transition: color $trDuration $timingFn;
+  }
+
+  &-ref:hover,
+  &-ref:focus {
+    color: $accentColor;
+  }
+
+  .current-page &-ref {
+    color: $accentColor;
+  }
+
+  .current-page &-ref:after {
+    position: absolute;
+    bottom: 0;
+
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: $accentColor;
+  }
+}
+
+.contacts {
+  display: inline-flex;
+  margin-left: auto;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  & li + li {
+    margin-left: 30px;
+  }
+
+  &-ref {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    text-decoration: none;
+    color: $ordinaryTextColor;
+    transition: color $trDuration $timingFn;
+  }
+
+  &-ref:hover,
+  &-ref:focus {
+    color: $accentColor;
+  }
+
+  & li:hover {
+    fill: $accentColor;
+  }
+}
+
+p {
+  color: $ordinaryTextColor;
+}
+
+.mailto,
+.tel {
+  margin-right: 10px;
+  fill: currentColor;
+}

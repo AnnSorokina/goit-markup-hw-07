@@ -1,0 +1,108 @@
+%worksFlex {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-works-list {
+  @extend %worksFlex;
+  padding-left: 0;
+
+  &-item {
+    @extend %worksFlex;
+    width: calc((100% - 2 * 30px) / 3);
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &:nth-child(-n + 6) {
+      margin-bottom: 30px;
+    }
+
+    &:hover {
+      box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+      /* background-attachment: local;
+  background-origin: border-box; */
+    }
+
+    &:hover .hover-text {
+      opacity: 1;
+    }
+
+    &:hover .portfolio-works-pic:before,
+    &:focus .portfolio-works-pic:before {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &:hover .portfolio-works-pic {
+    border: none;
+  }
+}
+
+.works-ref {
+  text-decoration: none;
+}
+.portfolio-works-pic {
+  position: relative;
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+
+  &:before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $backgroundTextColor;
+
+    transform: translateY(100%);
+    opacity: 0;
+    transition: opacity $trDuration $timingFn, transform $trDuration $timingFn;
+
+    border-color: $accentColor;
+  }
+}
+
+.portfolio-works-info {
+  padding: 20px 24px;
+  background-color: $titleTextColor;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.portfolio-works-list h2 {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.portfolio-works-p {
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.hover-text {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  align-items: center;
+  top: 0;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: $titleTextColor;
+  opacity: 0;
+  transition: opacity $trDuration $timingFn, transform $trDuration $timingFn;
+  /* padding: 63px 24px; */
+}
