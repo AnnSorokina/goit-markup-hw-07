@@ -14,12 +14,17 @@
     0px 1px 3px rgba(0, 0, 0, 0.12);
   background-color: $titleTextColor;
   cursor: pointer;
-}
 
-.icon-close {
-  width: 11px;
-  height: 11px;
-  fill: #000000;
+  .icon-close {
+    width: 11px;
+    height: 11px;
+    fill: #000000;
+  }
+
+  &:hover .icon-close,
+  &:focus .icon-close {
+    fill: $accentColor;
+  }
 }
 
 .modal > p {

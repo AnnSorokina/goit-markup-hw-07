@@ -9,10 +9,16 @@
 
   &-item {
     @extend %worksFlex;
+    // display: flex;
+    justify-content: space-between;
     width: calc((100% - 2 * 30px) / 3);
     flex-direction: column;
     border-radius: 5px;
     overflow: hidden;
+
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
 
     &:nth-child(-n + 6) {
       margin-bottom: 30px;
