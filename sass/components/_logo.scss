@@ -1,23 +1,25 @@
-.logo-header {
-  margin-right: 85px;
-}
-
-.logo-header,
-.logo-footer {
+%logo {
   font-family: $logoFont;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   text-decoration: none;
 }
 
-.logo-accent {
-  color: $accentColor;
+.logo-header {
+  margin-right: 85px;
+  @extend %logo;
+  font-size: 26px;
+  line-height: 1.19;
 }
 
 .logo-footer {
   margin-bottom: 10px;
+  @extend %logo;
   font-size: 22px;
   line-height: 1.18;
+
   color: $titleTextColor;
+}
+
+.logo-accent {
+  color: $accentColor;
 }

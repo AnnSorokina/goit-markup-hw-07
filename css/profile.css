@@ -298,6 +298,10 @@ p {
   padding-left: 0;
 }
 
+p {
+  color: #757575;
+}
+
 a {
   color: #212121;
 }
@@ -307,21 +311,16 @@ menu {
   list-style: none;
 }
 
-.logo-header {
-  margin-right: 85px;
-}
-
-.logo-header,
-.logo-footer {
+.logo-header, .logo-footer {
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   text-decoration: none;
 }
 
-.logo-accent {
-  color: #2196f3;
+.logo-header {
+  margin-right: 85px;
+  font-size: 26px;
+  line-height: 1.19;
 }
 
 .logo-footer {
@@ -329,6 +328,10 @@ menu {
   font-size: 22px;
   line-height: 1.18;
   color: #ffffff;
+}
+
+.logo-accent {
+  color: #2196f3;
 }
 
 .header {
@@ -425,10 +428,6 @@ menu {
 
 .contacts li:hover {
   fill: #2196f3;
-}
-
-p {
-  color: #757575;
 }
 
 .mailto,
